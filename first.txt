@@ -1,1 +1,0 @@
-# With this project I show how to set the garbage collector flags to the JVM in Java 17 (eclipse-temurin sdk).

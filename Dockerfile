@@ -8,7 +8,7 @@ WORKDIR /app
 COPY app/App.class .
 
 # Set garbage collector flags (e.g., using G1GC)
-ENV JAVA_OPTS="-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xmx256m"
+ENV JAVA_OPTS="-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xmx256m -Xlog:gc*,gc+phases=debug"
 
 # Run the application
 CMD ["sh", "-c", "java $JAVA_OPTS App"]
